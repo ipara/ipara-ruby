@@ -10,7 +10,6 @@ class HomeController < ApplicationController
             req.CardExpireYear = params[:year]
             req.Installment = params[:installment]
             req.Cvc = params[:cvc]
-            req.ThreeD = 'true'
             req.UserId = ''
             req.CardId = ''
 

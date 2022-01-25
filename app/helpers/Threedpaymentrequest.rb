@@ -6,7 +6,6 @@ class Threedpaymentrequest
     #3D secure ödeme formu başlatmak için gerekli olan servis girdi parametrelerini temsil eder.
     attr_accessor :Echo
     attr_accessor :Mode
-    attr_accessor :ThreeD
     attr_accessor :OrderId
     attr_accessor :Amount
     attr_accessor :CardOwnerName
