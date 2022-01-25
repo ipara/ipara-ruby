@@ -155,13 +155,20 @@ class HomeController < ApplicationController
             req.clientIp = '127.0.0.1'
             req.email = params[:email]
             req.gsm = params[:gsm]
+            if !params[:linkId].blank?
+                req.linkId = params[:linkId]
+            end
             req.linkState = params[:linkState]
-            req.startDate =
-                params[:startYear] + '-' + params[:startMonth] + '-' +
-                    params[:startDay] + ' 00:00:00'
-            req.endDate =
-                params[:endYear] + '-' + params[:endMonth] + '-' +
-                    params[:endDay] + ' 00:00:00'
+            req.startDate = nil
+            req.endDate = nil
+            if !params[:startYear].blank? && !params[:startMonth].blank? && !params[:startDay].blank? && !params[:endYear].blank? && !params[:endMonth].blank? && !params[:endDay].blank?
+                req.startDate =
+                    params[:startYear] + '-' + params[:startMonth] + '-' +
+                        params[:startDay] + ' 00:00:00'
+                req.endDate =
+                    params[:endYear] + '-' + params[:endMonth] + '-' +
+                        params[:endDay] + ' 00:00:00'
+            end
             req.pageSize = params[:pageSize]
             req.pageIndex = params[:pageIndex]
 

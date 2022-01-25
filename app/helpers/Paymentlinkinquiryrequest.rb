@@ -3,6 +3,7 @@ class Paymentlinkinquiryrequest
     attr_accessor :clientIp
     attr_accessor :email
     attr_accessor :gsm
+    attr_accessor :linkId
     attr_accessor :linkState
     attr_accessor :startDate
     attr_accessor :endDate
